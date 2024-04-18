@@ -3,19 +3,19 @@ function pingProbelm(req,res){
 }
 
 function addProbelm(req,res){
-
+      return res.status(501).json("Not implemented");
 }
 
 function getProbelm(req,res){
-
+   return res.status(501).json("Not implemented");
 }
 
 function getProbelms(req,res){
-
+   return res.status(501).json("Not implemented");
 }
 
 function deleteProbelm(req,res){
-
+   return res.status(501).json("Not implemented");
 }
 
 
