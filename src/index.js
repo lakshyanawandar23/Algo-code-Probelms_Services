@@ -3,6 +3,7 @@ const {PORT}=require('./config/server.config.js')
 const bodyParser=require('body-parser');
 const app=express();
 const apirouter=require('./routes');
+const errorHandler = require('./utils/errorHandler.js');
 app.use(bodyParser.text());
 app.use(bodyParser.json());
 
@@ -12,6 +13,8 @@ app.get('/',(req,res)=>{
     res.send('Ping check');
 })
 
+
+app.use(errorHandler);
 app.listen(5000,(req,res)=>{
     console.log("server is up",`${PORT}`);
 })
