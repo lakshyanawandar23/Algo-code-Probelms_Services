@@ -4,6 +4,7 @@ const bodyParser=require('body-parser');
 const app=express();
 const apirouter=require('./routes');
 const errorHandler = require('./utils/errorHandler.js');
+const connecttodb = require('./config/db.config.js');
 app.use(bodyParser.text());
 app.use(bodyParser.json());
 
@@ -15,6 +16,7 @@ app.get('/',(req,res)=>{
 
 
 app.use(errorHandler);
-app.listen(5000,(req,res)=>{
+app.listen(PORT,async(req,res)=>{
     console.log("server is up",`${PORT}`);
+    await connecttodb();
 })

@@ -3,7 +3,7 @@ const BaseError = require("../errors/BaseError");
 
 function errorHandler(err,req,res,next){
     if(err  instanceof BaseError){
-         return res.status(err.statuscode).json({
+         return res.status(err.statusCodes).json({
             success:false,
             message:err.message,
             error:err.details,
@@ -11,7 +11,7 @@ function errorHandler(err,req,res,next){
 
          })
     }
-    return res.status(StatusCodes.NOT_IMPLEMENTED).json({
+    return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
         success:false,
         message:"NOT IMPEMNETED",
         error:err.details,

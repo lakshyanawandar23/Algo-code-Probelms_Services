@@ -1,5 +1,5 @@
 const dotenv=require('dotenv');
 dotenv.config();
- console.log(process.env.PORT);
+ console.log(process.env.PORT_DEV);
 
-module.exports={PORT:process.env.PORT};
+module.exports={PORT:process.env.PORT_DEV,URI:process.env.ATLAS_DB_URL};

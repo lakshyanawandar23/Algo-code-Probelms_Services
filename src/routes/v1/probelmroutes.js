@@ -8,5 +8,6 @@ probelmroutes.get('/',Probelmcontroller.getProbelms);
 probelmroutes.get('/',);
 probelmroutes.delete('/:id',Probelmcontroller.deleteProbelm);
 probelmroutes.post('/',Probelmcontroller.addProbelm);
+probelmroutes.put('/:id',Probelmcontroller.updateProbelm);
 
 module.exports=probelmroutes;
