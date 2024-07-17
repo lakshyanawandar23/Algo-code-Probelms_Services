@@ -6,8 +6,10 @@ class ProbelmRepository {
         try {
             const probelm = await Probelm.create({
                 title: ProbelmData.title,
+                stubus:ProbelmData.stubus,
                 description: ProbelmData.description,
-                testCases: ProbelmData.testCases ? ProbelmData.testCases : []
+                testCases: ProbelmData.testCases ? ProbelmData.testCases : [],
+                editorial:ProbelmData.editorial?ProbelmData.editorial:" "
             })
             return probelm;
         }

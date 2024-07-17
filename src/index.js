@@ -8,7 +8,7 @@ const connecttodb = require('./config/db.config.js');
 app.use(bodyParser.text());
 app.use(bodyParser.json());
 
-console.log(PORT);
+//console.log(PORT);
 app.use('/api',apirouter);
 app.get('/',(req,res)=>{
     res.send('Ping check');
