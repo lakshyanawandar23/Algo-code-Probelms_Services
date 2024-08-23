@@ -5,6 +5,9 @@ const app=express();
 const apirouter=require('./routes');
 const errorHandler = require('./utils/errorHandler.js');
 const connecttodb = require('./config/db.config.js');
+const cors=require('cors')
+
+app.use(cors());
 app.use(bodyParser.text());
 app.use(bodyParser.json());
 
